@@ -4,5 +4,5 @@ eqn:=diff(sigma2(r)*rho,r)=diff(phi,r)*rho;
 res:=dsolve(eqn,sigma2(r));
 s2:=simplify(subs(_C1=0,subs(res,sigma2(r))),assume=positive);
 eqnbh:=diff(sigma2(r)*rho,r)=(diff(phi,r)+G*Mb/r^2)*rho;
-resbh:=dsolve(eqn,bhsigma2(r));
+resbh:=dsolve(eqnbh,sigma2(r));
 s2bh:=simplify(subs(_C1=0,subs(resbh,sigma2(r))),assume=positive);
