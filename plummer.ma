@@ -14,5 +14,5 @@ s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=po
 s2bhcolumn:=simplify(int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
 hld:=subs({G=1,Mb=1,a=1},s2bhcolumn);
 for lr from -2 to 2 by 0.1 do
-  lprint(lr,evalf(subs(R=10^lr,hld));
+  lprint(lr,evalf(subs(R=10^lr,hld)));
 od:
