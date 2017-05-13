@@ -14,10 +14,10 @@ for lr from -2 to 2 by 0.1 do
   lprint(lr,evalf(subs(r=10^lr,hld)),evalf(1/6/10^lr));
 od:
 columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
-s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
-s2bhcollarge:=simplify(int(rho*G*Mb/6/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
-s2bhcolumn:=simplify((int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..10*a)+int(rho*G*Mb/6/sqrt(r^2-R^2),r=10*a..infinity))/columnden,assume=positive);
+s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2)*2,r=R..infinity)/columnden,assume=positive);
+s2bhcolumn:=simplify((int(rho*s2bhval*r/sqrt(r^2-R^2)*2,r=R..20*a))/columnden,assume=positive);
 hld:=subs({G=1,Mb=1,a=1},s2bhcolumn);
-for lr from -2 to 1 by 0.1 do
+for lr from -2 to 1.2 by 0.1 do
   lprint(lr,evalf(subs(R=10^lr,hld)));
 od:
+%  ctioga2 --name bh --ylog data --math /xrange -2:1 '10**(-x/3)*(0.015+10**(2*x))**(-1.0/3.0)/7'  --xrange -2:1 --yrange -2:1
