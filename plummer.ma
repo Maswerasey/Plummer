@@ -11,4 +11,4 @@ s2bhval:=simplify((limit(s2bh2,r=infinity)-s2bh2)/rho,assume=positive);
 asympt(s2bhval,r);
 columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
 s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
-s2bhcolumn:=simplify(int(rho*s2bhvl*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
+s2bhcolumn:=simplify(int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
