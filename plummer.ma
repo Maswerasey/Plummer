@@ -6,6 +6,6 @@ s2:=simplify(subs(_C1=0,subs(res,sigma2(r))),assume=positive);
 eqnbh:=diff(sigma2(r)*rho,r)=-diff(phi-G*Mb/r,r)*rho;
 resbh:=dsolve(eqnbh,sigma2(r));
 s2bh:=simplify(subs(_C1=0,subs(resbh,sigma2(r))),assume=positive);
-s2bh2:=int(rho*G*Mb/r/r,r)/rho;
+s2bh2:=int(rho*G*Mb/r/r,r);
 s2bhval:=limit(s2bh2,r=infinity)-s2bh2;
 columnden:=int(rho*r/sqrt(R^2-r^2)*2,r=R..infinity);
