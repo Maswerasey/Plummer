@@ -15,8 +15,9 @@ for lr from -2 to 2 by 0.1 do
 od:
 columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
 s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
-s2bhcolumn:=simplify(int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..10*a)/columnden,assume=positive);
+s2bhcollarge:=simplify(int(rho*G*Mb/r*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
+s2bhcolumn:=simplify((int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..10*a)+int(rho*G*Mb/r*r/sqrt(r^2-R^2),r=10*a..infinity))/columnden,assume=positive);
 hld:=subs({G=1,Mb=1,a=1},s2bhcolumn);
-for lr from -2 to 2 by 0.1 do
+for lr from -2 to 1 by 0.1 do
   lprint(lr,evalf(subs(R=10^lr,hld)));
 od:
