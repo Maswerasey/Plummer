@@ -11,7 +11,7 @@ s2bhval:=simplify((limit(s2bh2,r=infinity)-s2bh2)/rho,assume=positive);
 asympt(s2bhval,r);
 hld:=subs({G=1,Mb=1,a=1},s2bhval);
 for lr from -2 to 2 by 0.1 do
-  lprint(lr,evalf(subs(R=10^lr,hld)));
+  lprint(lr,evalf(subs(r=10^lr,hld)));
 od:
 quit;
 columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
