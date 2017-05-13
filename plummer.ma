@@ -13,7 +13,6 @@ hld:=subs({G=1,Mb=1,a=1},s2bhval);
 for lr from -2 to 2 by 0.1 do
   lprint(lr,evalf(subs(r=10^lr,hld)),evalf(1/6/10^lr));
 od:
-quit;
 columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
 s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
 s2bhcolumn:=simplify(int(rho*s2bhval*r/sqrt(r^2-R^2),r=R..infinity)/columnden,assume=positive);
