@@ -20,6 +20,6 @@ Both expressions have G M / a in front so we are really interested in the ratio 
 
 The other dashed curve is a fitted formula for the black hole dispersion.  It isn't pretty but you can use it if you want.
 
-  -x**(1/3)*3*3.1415/64*(2.1+x**2)**(0.25)*((3*3.1415/64)**(12.0/7.0)+x**2)**(-7.0/12.0) 
+  x**(-1.0/3.0)*3*3.1415/64*(2.1+x**2)**(0.25)*((3*3.1415/64)**(12.0/7.0)+x**2)**(-7.0/12.0) 
 
 where the units are G M<sub>bh</sub>/a and x is R/a.
