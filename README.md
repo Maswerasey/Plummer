@@ -18,7 +18,7 @@ Both expressions have G M / a in front so we are really interested in the ratio 
 
 ![velocity variance as a function of projected radius](blackhole.png)
 
-The other dashed curve is a fitted formula for the black hole dispersion.  It isn't pretty but you can use it if you want.
+The other dashed curve is a fitted formula for the black hole dispersion squared.  It isn't pretty but you can use it if you want.
 ```
   x**(-1.0/3.0)*3*3.1415/64*(2.1+x**2)**(0.25)*((3*3.1415/64)**(12.0/7.0)+x**2)**(-7.0/12.0) 
 ```
