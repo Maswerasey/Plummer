@@ -8,8 +8,6 @@ The first is the projected surface density:
 
 The second is the projected velocity dispersion squared without the black hole:
 
-&sigma;<sup>2</sup> = 3 &pi;/64 G M/a (1 + (R/a)<sup>2</sup> )<sup>-1/2</sup>
-
 <img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}\frac{a^{1/2}}{\left(R^2+a^2\right)^{1/2}}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a}{\left(R^2+a^2\right)^{1/2}}"/>
 
 The square of the velocity dispersion with the black hole is contained within the file blacksigma2.dat. The projected radius is in the first column; the units for the projected radius are a.  The second column contains the velocity dispersion squared in units of G M<sub>bh</sub>/a.
@@ -20,10 +18,14 @@ Both expressions have G M / a in front so we are really interested in the ratio 
 
 ![velocity variance as a function of projected radius](blackhole.png)
 
-The other dashed curve is a fitted formula for the black hole dispersion squared.  It isn't pretty but you can use it if you want.
+The other dashed curve is a fitted formula for the black hole dispersion squared.  It isn't pretty but you can use it if you want in python.
 ```
   x**(-1.0/3.0)*3*3.1415/64*(2.1+x**2)**(0.25)*((3*3.1415/64)**(12.0/7.0)+x**2)**(-7.0/12.0) 
 ```
-where the units are G M<sub>bh</sub>/a and x is R/a.
+and
+
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a}{\left(R^2+a^2\right)^{1/2}}"/>
+
+where x is R/a.
 
 <img src="https://latex.codecogs.com/gif.latex?\mathcal{W}(A,f)&space;=&space;(T,\bar{f})" title="\mathcal{W}(A,f) = (T,\bar{f})" />
