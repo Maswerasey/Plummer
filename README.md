@@ -4,7 +4,7 @@ Here are some results for the projected quantities for a Plummer model that you 
 
 The first is the projected surface density:
 
-&Sigma; = M a<sup>2</sup> &pi; (R<sup>2</sup> + a<sup>2</sup>)<sup>-2</sup>
+&Sigma; = M a<sup>2</sup> &pi;<sup>-1</sup> (R<sup>2</sup> + a<sup>2</sup>)<sup>-2</sup>
 
 The second is the projected velocity dispersion squared without the black hole:
 
