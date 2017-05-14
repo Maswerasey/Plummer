@@ -1,0 +1,272 @@
+    |\^/|     Maple 2016 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2016
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> phi:=-G*M/sqrt(r^2+a^2);
+                                          G M
+                             phi := - ------------
+                                        2    2 1/2
+                                      (a  + r )
+
+> rho:=simplify(diff(r*phi,r$2)/r/4*Pi/G);
+                                           2
+                                      3 M a  Pi
+                             rho := --------------
+                                        2    2 5/2
+                                    4 (a  + r )
+
+> eqn:=diff(sigma2(r)*rho,r)=-diff(phi,r)*rho;
+           /d           \    2
+           |-- sigma2(r)| M a  Pi                     2               2    2
+           \dr          /                sigma2(r) M a  Pi r     3 G M  r a  Pi
+eqn := 3/4 ---------------------- - 15/4 ------------------- = - --------------
+                  2    2 5/2                  2    2 7/2              2    2 4
+                (a  + r )                   (a  + r )             4 (a  + r )
+
+> res:=dsolve(eqn,sigma2(r));
+                                /    G M           \   2    2 (5/2)
+             res := sigma2(r) = |------------ + _C1| (a  + r )
+                                |    2    2 3      |
+                                \6 (a  + r )       /
+
+> s2:=simplify(subs(_C1=0,subs(res,sigma2(r))),assume=positive);
+                                         G M
+                              s2 := --------------
+                                        2    2 1/2
+                                    6 (a  + r )
+
+> eqnbh:=diff(sigma2(r)*rho,r)=-diff(-G*Mb/r,r)*rho;
+eqnbh :=
+
+        /d           \    2
+        |-- sigma2(r)| M a  Pi                     2                     2
+        \dr          /                sigma2(r) M a  Pi r      3 G Mb M a  Pi
+    3/4 ---------------------- - 15/4 ------------------- = - -----------------
+               2    2 5/2                  2    2 7/2            2   2    2 5/2
+             (a  + r )                   (a  + r )            4 r  (a  + r )
+
+> resbh:=dsolve(eqnbh,sigma2(r));
+resbh :=
+
+                                         4       2  2      4         2    2
+                  2    2 (5/2)       (3 a  + 12 a  r  + 8 r ) G Mb (a  + r )
+    sigma2(r) = (a  + r )      _C1 + ---------------------------------------
+                                                          6
+                                                     3 r a
+
+> s2bh:=simplify(subs(_C1=0,subs(resbh,sigma2(r))),assume=positive);
+                           2    2         4      2  2        4
+                         (a  + r ) Mb G (a  + 4 a  r  + 8/3 r )
+                 s2bh := --------------------------------------
+                                             6
+                                          r a
+
+> s2bh2:=int(rho*G*Mb/r/r,r);
+                                4       2  2      4
+                            (3 a  + 12 a  r  + 8 r ) G Mb M Pi
+                 s2bh2 := - ----------------------------------
+                                      4     2    2 3/2
+                                   4 a  r (a  + r )
+
+> s2bhval:=simplify((limit(s2bh2,r=infinity)-s2bh2)/rho,assume=positive);
+s2bhval := - G Mb
+
+         4       2  2      2     2    2 1/2      4      3   2    2 1/2
+    (-3 a  - 12 a  r  + 8 a  r (a  + r )    - 8 r  + 8 r  (a  + r )   )
+
+      2    2    /     6
+    (a  + r )  /  (3 a  r)
+              /
+
+> asympt(s2bhval,r);
+                                 G Mb      1
+                                 ---- + O(----)
+                                 6 r        3
+                                           r
+
+> hld:=subs({G=1,Mb=1,a=1},s2bhval);
+                      2         2     1/2      4      3   2     1/2    2
+            (-3 - 12 r  + 8 r (r  + 1)    - 8 r  + 8 r  (r  + 1)   ) (r  + 1)
+   hld := - -----------------------------------------------------------------
+                                           3 r
+
+> for lr from -2 to 2 by 0.1 do
+>   lprint(lr,evalf(subs(r=10^lr,hld)),evalf(1/6/10^lr));
+> od:
+-2, 97.38267332, 16.66666667
+-1.9, 76.82805963, 13.23880391
+-1.8, 60.50666413, 10.51595574
+-1.7, 47.54921793, 8.353120560
+-1.6, 37.26554200, 6.635119508
+-1.5, 29.10776305, 5.270462767
+-1.4, 22.64109360, 4.186477385
+-1.3, 17.52061275, 3.325437192
+-1.2, 13.47280141, 2.641488653
+-1.1, 10.28083816, 2.098209020
+-1.0, 7.772859167, 1.666666667
+-.9, 5.812545660, 1.323880391
+-.8, 4.291533470, 1.051595574
+-.7, 3.123253750, .8353120560
+-.6, 2.237923177, .6635119508
+-.5, 1.578511192, .5270462767
+-.4, 1.097615964, .4186477385
+-.3, .7552521120, .3325437192
+-.2, .5175441190, .2641488653
+-.1, .3561935743, .2098209020
+0., .2483886667, .1666666667
+.1, .1767023176, .1323880391
+.2, .1286338537, .1051595574
+.3, .9574882600e-1, .8353120560e-1
+.4, .7263033633e-1, .6635119508e-1
+.5, .5590375640e-1, .5270462767e-1
+.6, .4348506433e-1, .4186477385e-1
+.7, .3406864957e-1, .3325437192e-1
+.8, .2682090026e-1, .2641488653e-1
+.9, .2119503271e-1, .2098209020e-1
+1.0, .1679966667e-1, .1666666667e-1
+1.1, .1351326607e-1, .1323880391e-1
+1.2, .1060801844e-1, .1051595574e-1
+1.3, .6667580627e-2, .8353120560e-2
+1.4, .8386225013e-2, .6635119508e-2
+1.5, -.1055146646e-1, .5270462767e-2
+1.6, -0., .4186477385e-2
+1.7, -.3342578400, .3325437192e-2
+1.8, -0., .2641488653e-2
+1.9, -0., .2098209020e-2
+2.0, -6.667333333, .1666666667e-2
+> columnden:=simplify(int(rho*r/sqrt(r^2-R^2)*2,r=R..infinity),assume=positive);
+                                             2
+                                          M a  Pi
+                            columnden := ----------
+                                           2    2 2
+                                         (R  + a )
+
+> s2column:=simplify(int(rho*s2*r/sqrt(r^2-R^2)*2,r=R..infinity)/columnden,assume=positive);
+memory used=39.2MB, alloc=78.3MB, time=0.93
+memory used=104.2MB, alloc=118.3MB, time=2.12
+memory used=201.1MB, alloc=118.3MB, time=3.71
+memory used=295.4MB, alloc=150.3MB, time=5.88
+memory used=415.2MB, alloc=182.3MB, time=8.05
+memory used=538.7MB, alloc=214.3MB, time=10.36
+memory used=645.4MB, alloc=470.3MB, time=12.30
+memory used=843.4MB, alloc=502.3MB, time=15.93
+memory used=1072.4MB, alloc=534.3MB, time=20.16
+memory used=1301.2MB, alloc=566.3MB, time=24.01
+memory used=1571.3MB, alloc=598.3MB, time=28.72
+Warning, unable to determine if (-a^2)^(1/2) is between R and infinity; try to
+use assumptions or use the AllSolutions option
+Warning, unable to determine if a^2/(-a^2)^(1/2) is between R and infinity; try
+to use assumptions or use the AllSolutions option
+Warning, unable to determine if -R is between R and infinity; try to use
+assumptions or use the AllSolutions option
+Warning, unable to determine if -(-a^2)^(1/2) is between R and infinity; try to
+use assumptions or use the AllSolutions option
+Warning, unable to determine if -a^2/(-a^2)^(1/2) is between R and infinity; try
+to use assumptions or use the AllSolutions option
+Warning, unable to determine if PIECEWISE([[1/(R^2+2*a^2)^(1/2)*R*a, R, -R],
+And(0 <= R^2*(a^2+R^2)/(R^2+2*a^2),R^2*(a^2+R^2)/(R^2+2*a^2) <=
+0,2*argument(csgn(a)*R*(a^2+R^2)^(1/2)/(R^2+2*a^2)^(1/2)) <= Pi,-Pi <
+2*argument(csgn(a)*R*(a^2+R^2)^(1/2)/(R^2+2*a^2)^(1/2)))],[[-I*a, I*a, R, -R], 0
+<= a^2+R^2],[[], otherwise]) is between R and infinity; try to use assumptions
+or use the AllSolutions option
+Warning, unable to determine if PIECEWISE([[1/(R^2+2*a^2)^(1/2)*R*a, R, -R],
+And(0 <= R^2*(a^2+R^2)/(R^2+2*a^2),R^2*(a^2+R^2)/(R^2+2*a^2) <=
+0,2*argument(-csgn(a)*R*(a^2+R^2)^(1/2)/(R^2+2*a^2)^(1/2)) <= Pi,-Pi <
+2*argument(-csgn(a)*R*(a^2+R^2)^(1/2)/(R^2+2*a^2)^(1/2)))],[[-I*a, I*a, R, -R],
+0 <= a^2+R^2],[[], otherwise]) is between R and infinity; try to use assumptions
+or use the AllSolutions option
+memory used=1892.6MB, alloc=598.3MB, time=34.50
+                                         3 M Pi G
+                          s2column := ---------------
+                                           2    2 1/2
+                                      64 (a  + R )
+
+> s2bhcolumn:=simplify((int(rho*s2bhval*r/sqrt(r^2-R^2)*2,r=R..20*a))/columnden,assume=positive);
+Warning, unable to determine if (-a^2)^(1/2) is between R and 20*a; try to use
+assumptions or use the AllSolutions option
+Warning, unable to determine if -R is between R and 20*a; try to use assumptions
+or use the AllSolutions option
+Warning, unable to determine if -(-a^2)^(1/2) is between R and 20*a; try to use
+assumptions or use the AllSolutions option
+memory used=2229.1MB, alloc=630.3MB, time=39.72
+                   /                   20 a
+                   |       2    2 2   /
+                   |G Mb (a  + R )   |
+s2bhcolumn := -1/2 |---------------  |
+                   |       6         |
+                   |      a         /
+                   \                  R
+
+                                                                        \
+        4       2  2      2     2    2 1/2      4      3   2    2 1/2   |
+    -3 a  - 12 a  r  + 8 a  r (a  + r )    - 8 r  + 8 r  (a  + r )      |
+    ----------------------------------------------------------------- dr|
+                         2    2 3/2    2    2 1/2                       |
+                       (a  + r )    (-R  + r )                          |
+                                                                        /
+
+> hld:=subs({G=1,Mb=1,a=1},s2bhcolumn);
+memory used=2538.3MB, alloc=630.3MB, time=44.64
+Warning, unable to determine if (-a^2)^(1/2) is between R and 20*a; try to use
+assumptions or use the AllSolutions option
+Warning, unable to determine if -R is between R and 20*a; try to use assumptions
+or use the AllSolutions option
+Warning, unable to determine if -(-a^2)^(1/2) is between R and 20*a; try to use
+assumptions or use the AllSolutions option
+hld := -1/2
+
+       20
+      /            2         2     1/2      4      3   2     1/2
+     |    -3 - 12 r  + 8 r (r  + 1)    - 8 r  + 8 r  (r  + 1)         2     2
+     |    ------------------------------------------------------ dr (R  + 1)
+     |                    2     3/2    2    2 1/2
+    /                   (r  + 1)    (-R  + r )
+      R
+
+> for lr from -2 to 1.2 by 0.1 do
+>   lprint(lr,evalf(subs(R=10^lr,hld)));
+> od:
+-2, 5.489317864
+-1.9, 5.144992961
+-1.8, 4.801185923
+-1.7, 4.458139086
+-1.6, 4.116201448
+-1.5, 3.775870733
+-1.4, 3.437848818
+-1.3, 3.103112050
+-1.2, 2.772996130
+-1.1, 2.449291232
+-1.0, 2.134335850
+-.9, 1.831086665
+-.8, 1.543127248
+-.7, 1.274563313
+-.6, 1.029745894
+-.5, .8127820476
+-.4, .6268544598
+-.3, .4734829308
+-.2, .3519835403
+-.1, .2594159015
+0., .1911496172
+.1, .1418610097
+.2, .1065278054
+.3, .8104869980e-1
+.4, .6240371843e-1
+.5, .4851055754e-1
+.6, .3797714136e-1
+.7, .2987393575e-1
+.8, .2356598685e-1
+.9, -2054.131586*int(1/(r^2+1.)^(3/2)*(-3.-12.*r^2+8.*r*(r^2+1.)^(1/2)-8.*r^4+8\
+.*r^3*(r^2+1.)^(1/2))/(r^2-63.09573444)^(1/2),r = 7.943282347 .. 20.)
+1.0, .1461479479e-1
+memory used=2848.4MB, alloc=662.3MB, time=50.23
+1.1, -12718.42148*int(1/(r^2+1.)^(3/2)*(-3.-12.*r^2+8.*r*(r^2+1.)^(1/2)-8.*r^4+
+8.*r^3*(r^2+1.)^(1/2))/(r^2-158.4893193)^(1/2),r = 12.58925412 .. 20.)
+1.2, -31799.55583*int(1/(r^2+1.)^(3/2)*(-3.-12.*r^2+8.*r*(r^2+1.)^(1/2)-8.*r^4+
+8.*r^3*(r^2+1.)^(1/2))/(r^2-251.1886430)^(1/2),r = 15.84893192 .. 20.)
+> %  ctioga2 --name bh --ylog data --math /xrange -2:1 '10**(-x/3)*(0.015+10**(2*x))**(-1.0/3.0)/7'  --xrange -2:1 --yrange -2:1
+on line 23, syntax error, missing operator or `;`:
+%  ctioga2 --name bh --ylog data --math /xrange -2:1 '10**(-x/3)*(0.015+10**(2*x))**(-1.0/3.0)/7'  --xrange -2:1 --yrange -2:1
+         ^
+> quit
+memory used=2857.2MB, alloc=662.3MB, time=50.71
