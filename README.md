@@ -24,7 +24,7 @@ The other dashed curve is a fitted formula for the black hole dispersion squared
 ```
 and
 
-<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a}{\left(R^2+a^2\right)^{1/2}}"/>
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}(2.1+x^2)^{1/4}\left[\left(\frac{3\pi}{64}\right)^{12/7}+x^2\right]^{-7/12}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a}{\left(R^2+a^2\right)^{1/2}}"/> where <img src="https://latex.codecogs.com/gif.latex?x=R/a" title="x =R/a"/>
 
 where x is R/a.
 
