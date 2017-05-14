@@ -6,7 +6,7 @@ The first is the projected surface density:
 
 &Sigma; = M a<sup>2</sup> &pi;<sup>-1</sup> (R<sup>2</sup> + a<sup>2</sup>)<sup>-2</sup>
 
-<img src="https://www.codecogs.com/eqnedit.php?latex=\Sigma=\frac{M a^2 \pi}{(R^2+a^2)^2} title=""https://www.codecogs.com/eqnedit.php?latex=\Sigma=\frac{M a^2 \pi}{(R^2+a^2)^2}">
+<img src="https://www.codecogs.com/eqnedit.php?giflatex=\Sigma=\frac{M a^2 \pi}{(R^2+a^2)^2} title=""https://www.codecogs.com/eqnedit.php?latex=\Sigma=\frac{M a^2 \pi}{(R^2+a^2)^2}">
 
 The second is the projected velocity dispersion squared without the black hole:
 
