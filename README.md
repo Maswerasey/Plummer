@@ -12,3 +12,4 @@ The second is the projected velocity dispersion squared without the black hole:
 
 The square of the velocity dispersion with the black hole is contained within the file blacksigma2.dat. The projected radius is in the first column; the units for the projected radius are a.  The second column contains the velocity dispersion squared in units of G M<sub>bh</sub>/a.
 
+The strategy is to fit for the value of a using the distribution of stars as a function of projected radius and the first equation.  Once you have a, you can find for the measured square of the velocity dispersion using a sum of the values from the second equation and the data in the file (you can interpolate through the data points --- it works best using a log-log plot).
