@@ -10,7 +10,7 @@ The second is the projected velocity dispersion squared without the black hole:
 
 &sigma;<sup>2</sup> = 3 &pi;/64 G M/a (1 + (R/a)<sup>2</sup> )<sup>-1/2</sup>
 
-<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}\frac{a^{1/2}}{\left(R^2+a^2\right)^{1/2}}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a^{1/2}}{\left(R^2+a^2\right)^{1/2}}"/>
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}\frac{a^{1/2}}{\left(R^2+a^2\right)^{1/2}}" title="sigma^2 = \frac{3\pi}{64}\frac{GM}{a}\frac{a}{\left(R^2+a^2\right)^{1/2}}"/>
 
 The square of the velocity dispersion with the black hole is contained within the file blacksigma2.dat. The projected radius is in the first column; the units for the projected radius are a.  The second column contains the velocity dispersion squared in units of G M<sub>bh</sub>/a.
 
