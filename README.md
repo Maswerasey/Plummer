@@ -24,8 +24,4 @@ The other dashed curve is a fitted formula for the black hole dispersion squared
 ```
 and
 
-<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}(2.1+x^2)^{1/4}\left[\left(\frac{3\pi}{64}\right)^{12/7}+x^2\right]^{-7/12}" title="\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}(2.1+x^2)^{1/4}\left[\left(\frac{3\pi}{64}\right)^{12/7}+x^2\right]^{-7/12}"/> where <img src="https://latex.codecogs.com/gif.latex?x=R/a" title="x =R/a"/>
-
-where x is R/a.
-
-<img src="https://latex.codecogs.com/gif.latex?\mathcal{W}(A,f)&space;=&space;(T,\bar{f})" title="\mathcal{W}(A,f) = (T,\bar{f})" />
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}(2.1+x^2)^{1/4}\left[\left(\frac{3\pi}{64}\right)^{12/7}+x^2\right]^{-7/12}" title="\sigma^2=\frac{3\pi}{64}\frac{GM}{a}x^{-1/3}(2.1+x^2)^{1/4}\left[\left(\frac{3\pi}{64}\right)^{12/7}+x^2\right]^{-7/12}"/> where <img src="https://latex.codecogs.com/gif.latex?x=R/a" title="x =R/a"/>.
