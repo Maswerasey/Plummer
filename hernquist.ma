@@ -11,7 +11,9 @@ for lR from -2 to 2 by 0.1 do:
    sR:=evalf(subs({a=1,M=1,Mbh=1,G=1},sigmaR)):
    cvr2H:=evalf(subs({a=1,M=1,Mbh=1,G=1},colvr2H)):
    cvr2BH:=evalf(subs({a=1,M=1,Mbh=1,G=1},colvr2BH)):
-   lprint(lR,R,sR,cvr2H,cvr2BH,cvr2H/sR,cvr2BH/sR):
+   s2H:=evalf(subs({a=1,M=1,Mbh=1,G=1,r=R},vr2H)):
+   s2BH:=evalf(subs({a=1,M=1,Mbh=1,G=1,r=R},vr2BH)):
+   lprint(lR,R,sR,cvr2H,cvr2BH,cvr2H/sR,cvr2BH/sR,s2H,s2BH):
 #   lprint(la,a,sR):
 #   lprint(la,a,sR,cvr2H,cvr2H/sR):
 #   lprint(la,a,sR,cvr2BH):
