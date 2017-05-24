@@ -6,4 +6,4 @@ vr2BH:=simplify(int(-diff(phiBH,r)*rhoH,r)/rhoH,assume=positive);
 sigmaR:=2*int(rhoH*r/sqrt(r^2-R^2),r=0..infinity);
 colvr2H:=2*Int(rhoH*vr2H*r/sqrt(r^2-R^2),r=0..infinity);
 colvr2BH:=2*Int(rhoH*vr2BH*r/sqrt(r^2-R^2),r=0..infinity);
-evalf(subs({a=1,R=1,Mbh=1,G=1},colvr2BH));
+evalf(subs({a=1,R=1,M=1,Mbh=1,G=1},colvr2BH));
