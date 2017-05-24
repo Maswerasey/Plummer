@@ -10,7 +10,8 @@ for la from -2 to 2 by 0.1 do:
    a:=10^la:
    sR:=evalf(subs({R=1,M=1,Mbh=1,G=1},sigmaR)):
    cvr2H:=evalf(subs({R=1,M=1,Mbh=1,G=1},colvr2H)):
-   cvr2BH:=evalf(subs({R=1,M=1,Mbh=1,G=1},colvr2BH)):
-   lprint(la,a,sR,cvr2H,cvr2BH,cvr2H/sR,cvr2BH/sR):
+#   cvr2BH:=evalf(subs({R=1,M=1,Mbh=1,G=1},colvr2BH)):
+#   lprint(la,a,sR,cvr2H,cvr2BH,cvr2H/sR,cvr2BH/sR):
 #   lprint(la,a,sR):
+   lprint(la,a,sR,cvr2H,cvr2H/sR):
 od:
