@@ -34,3 +34,11 @@ This demonstates how to can make a nice function with a given power-law behavoiu
 Let's repeat the analysis for the Hernquist model that provides a good fit to the brightness profile of elliptical galaxies.  We have
 
 <img src="https://latex.codecogs.com/gif.latex?\rho=\frac{M}{2\pi}\frac{a}{r}\frac{1}{\left(r+a\right)^3}" title="\rho=\frac{M}{2\pi}\frac{a}{r}\frac{1}{\left(r+a\right)^3}"/>
+
+with the potential
+
+<img src="https://latex.codecogs.com/gif.latex?\phi=-\frac{GM}{r+a}" title="\phi=-\frac{GM}{r+a}"/>.
+
+Again by using Jeans equation and assuming an isotropic velocity distribution we can obtain the velocity dispersion of
+
+
