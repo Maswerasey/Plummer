@@ -1,4 +1,4 @@
-# Plummer
+# Plummer Model
 
 Here are some results for the projected quantities for a Plummer model that you can use to fit for the black hole.
 
@@ -27,3 +27,18 @@ and in math
 <img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{3\pi}{64}\frac{GM_{bh}}{a}x^{-1/3}\left(\frac{5}{2}+x^2\right)^{1/5}\left[\left(\frac{3\pi}{64}\right)^{15/8}+x^2\right]^{-8/15}" title="\sigma^2=\frac{3\pi}{64}\frac{GM_{bh}}{a}x^{-1/3}(2.5+x^2)^{1/5}\left[\left(\frac{3\pi}{64}\right)^{15/8}+x^2\right]^{-8/15}"/> where <img src="https://latex.codecogs.com/gif.latex?x=R/a" title="x =R/a"/>.
 
 This demonstates how to can make a nice function with a given power-law behavoiur in any regime.  At large values of x, you can add up all of the exponents and see that they add to -1.  For small values of x, you look at the leading term which has an exponent of -1/3.  In between the function actually gets a bit steeper to connect the two regimes, so to have three power-law regimes we need to multiply three terms where the constants that add to the x<sup>2</sup> delineate where the regimes start and end as well as the normalization at small values of x.   The power on the x<sup>2</sup> determines how smoothly the transition from one regime to the next is.  Higher powers give sharper transtions.
+
+
+# Hernquist Model
+
+Let's repeat the analysis for the Hernquist model that provides a good fit to the brightness profile of elliptical galaxies.  We have
+
+<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{M}{2\pi}\frac{a}{r}\frac{1}{\left(r+a\right)^3}" title="\rho=\frac{M}{2\pi}\frac{a}{r}\frac{1}{\left(r+a\right)^3}"/>
+
+with the potential
+
+<img src="https://latex.codecogs.com/gif.latex?\phi=-\frac{GM}{r+a}" title="\phi=-\frac{GM}{r+a}"/>.
+
+Again by using Jeans equation and assuming an isotropic velocity distribution we can obtain the velocity dispersion of
+
+
