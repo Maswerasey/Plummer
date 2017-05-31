@@ -46,3 +46,5 @@ Again by using Jeans equation and assuming an isotropic velocity distribution we
 For the black hole we can get the result:
 
 <img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}" title="\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}"/>.
+
+![velocity variance as a function of projected radius for Hernquist model](hernSigma.png)
