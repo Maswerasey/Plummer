@@ -55,4 +55,10 @@ From top to bottom the curves are the local velocity variance due to the black h
 
 The density is given by
 
-<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{1}{(R^2+1)^{3/2}}" title="\rho=\frac{1}{(R^2+1)^{3/2}}"/>
+<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{1}{(R^2+1)^{3/2}}" title="\rho=\frac{1}{(r^2+1)^{3/2}}"/>
+
+and the surface density is
+
+<img src="https://latex.codecogs.com/gif.latex?\Sigma=\frac{1}{R^2+1}" title="\Sigma=\frac{1}{R^2+1}"/>
+
+where we have taken a=1 to make things simpler.  The total mass of the model diverges so we have to be careful, so the model is only valid out to the maximum radius (the tidal radius).
