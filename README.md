@@ -41,4 +41,10 @@ with the potential
 
 Again by using Jeans equation and assuming an isotropic velocity distribution we can obtain the velocity dispersion of
 
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)-\frac{r}{r+a}\left[25+52\frac{r}{a}+42\left(\frac{r}{a}\right)^2+12\left(\frac{r}{a}\right)^3\right]\right\}" title="\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)-\frac{r}{r+a}\left[25+52\frac{r}{a}+42\left(\frac{r}{a}\right)^2+12\left(\frac{r}{a}\right)^3\right]\right\}\right\}"/>.
 
+For the black hole we can get the result:
+
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}" title="\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}"/>.
+
+![velocity variance as a function of projected radius for Hernquist model](hernSigma.png)
