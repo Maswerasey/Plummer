@@ -50,3 +50,9 @@ For the black hole we can get the result:
 ![velocity variance as a function of projected radius for Hernquist model](hernSigma.png)
 
 From top to bottom the curves are the local velocity variance due to the black hole, the projected variance due to the black hole, the projected surface density (red) and projected velocity variance due to the stars.  The two lines follow r<sup>-1</sup>.
+
+# King Model
+
+The density is given by
+
+<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{1}{(R^2+1)^{3/2}}" title="\rho=\frac{1}{(R^2+1)^{3/2}}"/>
