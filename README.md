@@ -41,4 +41,4 @@ with the potential
 
 Again by using Jeans equation and assuming an isotropic velocity distribution we can obtain the velocity dispersion of
 
-<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)\right\}" title="\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)\right\}"/>.
+<img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)-\frac{r}{r+a}\left[25+52\frac{r}{a}+42\left(\frac{r}{a}\right)^2+12\left(\frac{r}{a}\right)^3\right]\right\}" title="\sigma^2=\frac{GM}{12a}\left\{\frac{12r(r+a)^3}{a^4}\ln\left(\frac{r+a}{a}\right)-\frac{r}{r+a}\left[25+52\frac{r}{a}+42\left(\frac{r}{a}\right)^2+12\left(\frac{r}{a}\right)^3\right]\right\}\right\}"/>.
