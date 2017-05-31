@@ -48,3 +48,5 @@ For the black hole we can get the result:
 <img src="https://latex.codecogs.com/gif.latex?\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}" title="\sigma^2=\frac{GM_{bh}}{2r}\left\{\frac{12r^2(r+a)^2}{a^5}\ln\left(\frac{r+a}{a}\right)+\frac{1}{a^4}\left(2r+a\right)\left(a^2-6ar-6r^2\right)\right\}"/>.
 
 ![velocity variance as a function of projected radius for Hernquist model](hernSigma.png)
+
+From top to bottom the curves are the local velocity variance due to the black hole, the projected variance due to the black hole, the projected surface density (red) and projected velocity variance due to the stars.  The two lines follow r<sup>-1</sup>.
