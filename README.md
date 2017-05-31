@@ -64,4 +64,4 @@ and the surface density is
 where we have taken a=1 to make things simpler.  The total mass of the model diverges so we have to be careful, so the model is only valid out to the maximum radius (the tidal radius), so perhaps we want to be more sophisticated with
 the density is given by
 
-<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{1}{(r^2+1)^{3/2}}-\frac{1}{(r_t^2+1)^{3/2}}"" title="\rho=\frac{1}{(r^2+1)^{3/2}}"/>
+<img src="https://latex.codecogs.com/gif.latex?\rho=\frac{1}{(r^2+1)^{3/2}}-\frac{1}{(r_t^2+1)^{3/2}}" title="\rho=\frac{1}{(r^2+1)^{3/2}}"/>
